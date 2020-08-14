@@ -1,0 +1,1052 @@
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_Disable
+Tag : MMT_DIPB1_Disable
+BOOL 0
+1 test runs, 0.167452 seconds -> 167.451859 ms / tag
+jhlee@parity: ~$ 
+ jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_Enable
+Tag : MMT_DIPB1_Enable
+BOOL 0
+1 test runs, 0.190887 seconds -> 190.886974 ms / tag
+jhlee@parity: ~$ 
+5jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM1_Flow
+Tag : MMT_DIPB1_FM1_Flow
+REAL 0.000000
+1 test runs, 0.134498 seconds -> 134.498119 ms / tag
+jhlee@parity: ~$ 
+ jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM1_FlowAvg
+Tag : MMT_DIPB1_FM1_FlowAvg
+REAL 0.000000
+1 test runs, 0.150096 seconds -> 150.095940 ms / tag
+jhlee@parity: ~$ 
+ jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM1_FlowLowCount
+Tag : MMT_DIPB1_FM1_FlowLowCount
+SINT 0
+1 test runs, 0.13437 seconds -> 134.370089 ms / tag
+jhlee@parity: ~$ 
+ jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM1_FlowLowFraction
+Tag : MMT_DIPB1_FM1_FlowLowFraction
+REAL 0.100000
+1 test runs, 0.136753 seconds -> 136.753082 ms / tag
+jhlee@parity: ~$ 
+_jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM1_FlowLowTrip
+Tag : MMT_DIPB1_FM1_FlowLowTrip
+SINT 10
+1 test runs, 0.142576 seconds -> 142.575979 ms / tag
+jhlee@parity: ~$ 
+Cjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM1_FlowOK
+Tag : MMT_DIPB1_FM1_FlowOK
+BOOL 1
+1 test runs, 0.137546 seconds -> 137.545824 ms / tag
+jhlee@parity: ~$ 
+Qjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM1_FlowOKLatch
+Tag : MMT_DIPB1_FM1_FlowOKLatch
+BOOL 1
+1 test runs, 0.140826 seconds -> 140.825987 ms / tag
+jhlee@parity: ~$ 
+ljhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM1_FlowOK_Bypass
+Tag : MMT_DIPB1_FM1_FlowOK_Bypass
+BOOL 0
+1 test runs, 0.130955 seconds -> 130.954981 ms / tag
+jhlee@parity: ~$ 
+ijhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM1_FlowSMOO
+Tag : MMT_DIPB1_FM1_FlowSMOO
+REAL 0.999000
+1 test runs, 0.155502 seconds -> 155.502081 ms / tag
+jhlee@parity: ~$ 
+_jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM1_Interlock
+Tag : MMT_DIPB1_FM1_Interlock
+BOOL 0
+1 test runs, 0.144571 seconds -> 144.570827 ms / tag
+jhlee@parity: ~$ 
+ijhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM1_Setpoint
+Tag : MMT_DIPB1_FM1_Setpoint
+REAL 0.000000
+1 test runs, 0.13953 seconds -> 139.530182 ms / tag
+jhlee@parity: ~$ 
+ejhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM1_Setpoint1
+Tag : MMT_DIPB1_FM1_Setpoint1
+REAL 0.000000
+1 test runs, 0.143223 seconds -> 143.223047 ms / tag
+jhlee@parity: ~$ 
+
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM1_Setpoint_HISTORY
+Tag : MMT_DIPB1_FM1_Setpoint_HISTORY
+MR_Response:
+    USINT service         = 0xCC (Response to CIP_ReadData)
+    USINT reserved        = 0x00
+    USINT status          = 0x06 (Buffer too small, partial data only)
+    USINT ext. stat. size = 0
+    Data (net format) =
+    00000000 A0 02 FB 14                                     - ....
+EIP_read_tag: Failed tag : MMT_DIPB1_FM1_Setpoint_HISTORY
+1 test runs, 0.130493 seconds -> 130.492926 ms / tag
+jhlee@parity: ~$ 
+ejhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM1_Setpoint_sequence
+Tag : MMT_DIPB1_FM1_Setpoint_sequence
+SINT 0
+1 test runs, 0.202008 seconds -> 202.008009 ms / tag
+jhlee@parity: ~$ 
+1jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM2_Flow
+Tag : MMT_DIPB1_FM2_Flow
+REAL 0.000000
+1 test runs, 0.146072 seconds -> 146.071911 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM2_FlowAvg
+Tag : MMT_DIPB1_FM2_FlowAvg
+REAL 0.000000
+1 test runs, 0.133453 seconds -> 133.453131 ms / tag
+jhlee@parity: ~$ 
+tjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM2_FlowLowCount
+Tag : MMT_DIPB1_FM2_FlowLowCount
+SINT 0
+1 test runs, 0.137471 seconds -> 137.470961 ms / tag
+jhlee@parity: ~$ 
+ jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM2_FlowLowFraction
+Tag : MMT_DIPB1_FM2_FlowLowFraction
+REAL 0.100000
+1 test runs, 0.140625 seconds -> 140.625000 ms / tag
+jhlee@parity: ~$ 
+3jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM2_FlowLowTrip
+Tag : MMT_DIPB1_FM2_FlowLowTrip
+SINT 10
+1 test runs, 0.159365 seconds -> 159.364939 ms / tag
+jhlee@parity: ~$ 
+2jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM2_FlowOK
+Tag : MMT_DIPB1_FM2_FlowOK
+BOOL 1
+1 test runs, 0.167953 seconds -> 167.953014 ms / tag
+jhlee@parity: ~$ 
+ijhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM2_FlowOKLatch
+Tag : MMT_DIPB1_FM2_FlowOKLatch
+BOOL 1
+1 test runs, 0.154767 seconds -> 154.767036 ms / tag
+jhlee@parity: ~$ 
+ejhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM2_FlowOK_Bypass
+Tag : MMT_DIPB1_FM2_FlowOK_Bypass
+BOOL 0
+1 test runs, 0.200321 seconds -> 200.320959 ms / tag
+jhlee@parity: ~$ 
+tjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM2_FlowSMOO
+Tag : MMT_DIPB1_FM2_FlowSMOO
+REAL 0.999000
+1 test runs, 0.189181 seconds -> 189.181089 ms / tag
+jhlee@parity: ~$ 
+rjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM2_Interlock
+Tag : MMT_DIPB1_FM2_Interlock
+BOOL 0
+1 test runs, 0.134205 seconds -> 134.204865 ms / tag
+jhlee@parity: ~$ 
+ajhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM2_Setpoint
+Tag : MMT_DIPB1_FM2_Setpoint
+REAL 0.000000
+1 test runs, 0.146551 seconds -> 146.551132 ms / tag
+jhlee@parity: ~$ 
+ojhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM2_Setpoint1
+Tag : MMT_DIPB1_FM2_Setpoint1
+REAL 0.000000
+1 test runs, 0.157198 seconds -> 157.197952 ms / tag
+jhlee@parity: ~$ 
+rjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM2_Setpoint_HISTORY
+Tag : MMT_DIPB1_FM2_Setpoint_HISTORY
+MR_Response:
+    USINT service         = 0xCC (Response to CIP_ReadData)
+    USINT reserved        = 0x00
+    USINT status          = 0x06 (Buffer too small, partial data only)
+    USINT ext. stat. size = 0
+    Data (net format) =
+    00000000 A0 02 FB 14                                     - ....
+EIP_read_tag: Failed tag : MMT_DIPB1_FM2_Setpoint_HISTORY
+1 test runs, 0.145436 seconds -> 145.436049 ms / tag
+jhlee@parity: ~$ 
+rjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_FM2_Setpoint_sequence
+Tag : MMT_DIPB1_FM2_Setpoint_sequence
+SINT 0
+1 test runs, 0.168683 seconds -> 168.683052 ms / tag
+jhlee@parity: ~$ 
+ejhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_T01_Interlock_BM
+Tag : MMT_DIPB1_T01_Interlock_BM
+BOOL 0
+1 test runs, 0.157822 seconds -> 157.821894 ms / tag
+jhlee@parity: ~$ 
+rjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_T01_Interlock_BMLatch
+Tag : MMT_DIPB1_T01_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.193603 seconds -> 193.603039 ms / tag
+jhlee@parity: ~$ 
+ljhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_T01_Interlock_BM_Bypass
+Tag : MMT_DIPB1_T01_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.166665 seconds -> 166.665077 ms / tag
+jhlee@parity: ~$ 
+ojhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_T02_Interlock_BM
+Tag : MMT_DIPB1_T02_Interlock_BM
+BOOL 0
+1 test runs, 0.150149 seconds -> 150.148869 ms / tag
+jhlee@parity: ~$ 
+cjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_T02_Interlock_BMLatch
+Tag : MMT_DIPB1_T02_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.156548 seconds -> 156.548023 ms / tag
+jhlee@parity: ~$ 
+kjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_T02_Interlock_BM_Bypass
+Tag : MMT_DIPB1_T02_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.151369 seconds -> 151.369095 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_T03_Interlock_BM
+Tag : MMT_DIPB1_T03_Interlock_BM
+BOOL 0
+1 test runs, 0.14924 seconds -> 149.240017 ms / tag
+jhlee@parity: ~$ 
+Bjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_T03_Interlock_BMLatch
+Tag : MMT_DIPB1_T03_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.158759 seconds -> 158.758879 ms / tag
+jhlee@parity: ~$ 
+Mjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_T03_Interlock_BM_Bypass
+Tag : MMT_DIPB1_T03_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.167861 seconds -> 167.860985 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_T04_Interlock_BM
+Tag : MMT_DIPB1_T04_Interlock_BM
+BOOL 0
+1 test runs, 0.174196 seconds -> 174.196005 ms / tag
+jhlee@parity: ~$ 
+ajhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_T04_Interlock_BMLatch
+Tag : MMT_DIPB1_T04_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.15967 seconds -> 159.670115 ms / tag
+jhlee@parity: ~$ 
+yjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_T04_Interlock_BM_Bypass
+Tag : MMT_DIPB1_T04_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.162321 seconds -> 162.321091 ms / tag
+jhlee@parity: ~$ 
+tjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_T05_Interlock_BM
+Tag : MMT_DIPB1_T05_Interlock_BM
+BOOL 0
+1 test runs, 0.163827 seconds -> 163.826942 ms / tag
+jhlee@parity: ~$ 
+hjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_T05_Interlock_BMLatch
+Tag : MMT_DIPB1_T05_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.149696 seconds -> 149.695873 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_T05_Interlock_BM_Bypass
+Tag : MMT_DIPB1_T05_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.147422 seconds -> 147.421837 ms / tag
+jhlee@parity: ~$ 
+rjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_T06_Interlock_BM
+Tag : MMT_DIPB1_T06_Interlock_BM
+BOOL 0
+1 test runs, 0.141992 seconds -> 141.991854 ms / tag
+jhlee@parity: ~$ 
+ejhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_T06_Interlock_BMLatch
+Tag : MMT_DIPB1_T06_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.136061 seconds -> 136.060953 ms / tag
+jhlee@parity: ~$ 
+
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_DIPB1_T06_Interlock_BM_Bypass
+Tag : MMT_DIPB1_T06_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.166371 seconds -> 166.370869 ms / tag
+jhlee@parity: ~$ 
+pjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_FASTPS1_Pwr_Permit_BC
+Tag : MMT_FASTPS1_Pwr_Permit_BC
+BOOL 0
+1 test runs, 0.148846 seconds -> 148.845911 ms / tag
+jhlee@parity: ~$ 
+hjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_FASTPS1_Pwr_Status_BM
+Tag : MMT_FASTPS1_Pwr_Status_BM
+BOOL 0
+1 test runs, 0.163559 seconds -> 163.558960 ms / tag
+jhlee@parity: ~$ 
+ajhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_FASTPS2_Pwr_Permit_BC
+Tag : MMT_FASTPS2_Pwr_Permit_BC
+BOOL 0
+1 test runs, 0.136737 seconds -> 136.736870 ms / tag
+jhlee@parity: ~$ 
+_jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_FASTPS2_Pwr_Status_BM
+Tag : MMT_FASTPS2_Pwr_Status_BM
+BOOL 0
+1 test runs, 0.168106 seconds -> 168.105841 ms / tag
+jhlee@parity: ~$ 
+_jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_FASTPS3_Pwr_Permit_BC
+Tag : MMT_FASTPS3_Pwr_Permit_BC
+BOOL 0
+1 test runs, 0.155946 seconds -> 155.946016 ms / tag
+jhlee@parity: ~$ 
+rjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_FASTPS3_Pwr_Status_BM
+Tag : MMT_FASTPS3_Pwr_Status_BM
+BOOL 0
+1 test runs, 0.18551 seconds -> 185.510159 ms / tag
+jhlee@parity: ~$ 
+ijhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_FASTPS4_Pwr_Permit_BC
+Tag : MMT_FASTPS4_Pwr_Permit_BC
+BOOL 0
+1 test runs, 0.135642 seconds -> 135.642052 ms / tag
+jhlee@parity: ~$ 
+hjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_FASTPS4_Pwr_Status_BM
+Tag : MMT_FASTPS4_Pwr_Status_BM
+BOOL 0
+1 test runs, 0.155897 seconds -> 155.896902 ms / tag
+jhlee@parity: ~$ 
+ejhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_FASTPS5_Pwr_Permit_BC
+Tag : MMT_FASTPS5_Pwr_Permit_BC
+BOOL 0
+1 test runs, 0.136073 seconds -> 136.072874 ms / tag
+jhlee@parity: ~$ 
+ijhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_FASTPS5_Pwr_Status_BM
+Tag : MMT_FASTPS5_Pwr_Status_BM
+BOOL 0
+1 test runs, 0.150119 seconds -> 150.119066 ms / tag
+jhlee@parity: ~$ 
+ijhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_LATCH_Reset
+Tag : MMT_LATCH_Reset
+BOOL 0
+1 test runs, 0.168601 seconds -> 168.600798 ms / tag
+jhlee@parity: ~$ 
+hjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_PSC1_Pwr_Permit_BC
+Tag : MMT_PSC1_Pwr_Permit_BC
+BOOL 0
+1 test runs, 0.150367 seconds -> 150.367022 ms / tag
+jhlee@parity: ~$ 
+ejhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_PSC1_Pwr_Status_BM
+Tag : MMT_PSC1_Pwr_Status_BM
+BOOL 0
+1 test runs, 0.156445 seconds -> 156.445026 ms / tag
+jhlee@parity: ~$ 
+ejhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_PSC2_Pwr_Permit_BC
+Tag : MMT_PSC2_Pwr_Permit_BC
+BOOL 0
+1 test runs, 0.153426 seconds -> 153.426170 ms / tag
+jhlee@parity: ~$ 
+tjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_PSC2_Pwr_Status_BM
+Tag : MMT_PSC2_Pwr_Status_BM
+BOOL 0
+1 test runs, 0.142753 seconds -> 142.753124 ms / tag
+jhlee@parity: ~$ 
+sjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_PSC3_Pwr_Permit_BC
+Tag : MMT_PSC3_Pwr_Permit_BC
+BOOL 0
+1 test runs, 0.136261 seconds -> 136.260986 ms / tag
+jhlee@parity: ~$ 
+
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_PSC3_Pwr_Status_BM
+Tag : MMT_PSC3_Pwr_Status_BM
+BOOL 0
+1 test runs, 0.136925 seconds -> 136.924982 ms / tag
+jhlee@parity: ~$ 
+
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_Disable
+Tag : MMT_QFC1_Disable
+BOOL 0
+1 test runs, 0.143675 seconds -> 143.675089 ms / tag
+jhlee@parity: ~$ 
+pjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_Enable
+Tag : MMT_QFC1_Enable
+BOOL 0
+1 test runs, 0.149234 seconds -> 149.234056 ms / tag
+jhlee@parity: ~$ 
+Mjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_FM1_Flow
+Tag : MMT_QFC1_FM1_Flow
+REAL 0.000000
+1 test runs, 0.146795 seconds -> 146.795034 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_FM1_FlowAvg
+Tag : MMT_QFC1_FM1_FlowAvg
+REAL 0.000000
+1 test runs, 0.147533 seconds -> 147.533178 ms / tag
+jhlee@parity: ~$ 
+ jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_FM1_FlowLowCount
+Tag : MMT_QFC1_FM1_FlowLowCount
+SINT 0
+1 test runs, 0.150939 seconds -> 150.938988 ms / tag
+jhlee@parity: ~$ 
+0jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_FM1_FlowLowFraction
+Tag : MMT_QFC1_FM1_FlowLowFraction
+REAL 0.100000
+1 test runs, 0.180386 seconds -> 180.386066 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_FM1_FlowLowTrip
+Tag : MMT_QFC1_FM1_FlowLowTrip
+SINT 10
+1 test runs, 0.182049 seconds -> 182.049036 ms / tag
+jhlee@parity: ~$ 
+-jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_FM1_FlowOK
+Tag : MMT_QFC1_FM1_FlowOK
+BOOL 1
+1 test runs, 0.227291 seconds -> 227.291107 ms / tag
+jhlee@parity: ~$ 
+2jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_FM1_FlowOKLatch
+Tag : MMT_QFC1_FM1_FlowOKLatch
+BOOL 1
+1 test runs, 0.184353 seconds -> 184.353113 ms / tag
+jhlee@parity: ~$ 
+1jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_FM1_FlowOK_Bypass
+Tag : MMT_QFC1_FM1_FlowOK_Bypass
+BOOL 0
+1 test runs, 0.150965 seconds -> 150.964975 ms / tag
+jhlee@parity: ~$ 
+ jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_FM1_FlowSMOO
+Tag : MMT_QFC1_FM1_FlowSMOO
+REAL 0.999000
+1 test runs, 0.165409 seconds -> 165.409088 ms / tag
+jhlee@parity: ~$ 
+hjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_FM1_Interlock
+Tag : MMT_QFC1_FM1_Interlock
+BOOL 0
+1 test runs, 0.172878 seconds -> 172.878027 ms / tag
+jhlee@parity: ~$ 
+
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_FM1_Setpoint
+Tag : MMT_QFC1_FM1_Setpoint
+REAL 0.000000
+1 test runs, 0.186705 seconds -> 186.704874 ms / tag
+jhlee@parity: ~$ 
+_jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_FM1_Setpoint1
+Tag : MMT_QFC1_FM1_Setpoint1
+REAL 0.000000
+1 test runs, 0.217091 seconds -> 217.091084 ms / tag
+jhlee@parity: ~$ 
+njhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_FM1_Setpoint_HISTORY
+Tag : MMT_QFC1_FM1_Setpoint_HISTORY
+MR_Response:
+    USINT service         = 0xCC (Response to CIP_ReadData)
+    USINT reserved        = 0x00
+    USINT status          = 0x06 (Buffer too small, partial data only)
+    USINT ext. stat. size = 0
+    Data (net format) =
+    00000000 A0 02 FB 14                                     - ....
+EIP_read_tag: Failed tag : MMT_QFC1_FM1_Setpoint_HISTORY
+1 test runs, 0.17447 seconds -> 174.469948 ms / tag
+jhlee@parity: ~$ 
+4jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_FM1_Setpoint_sequence
+Tag : MMT_QFC1_FM1_Setpoint_sequence
+SINT 0
+1 test runs, 0.147746 seconds -> 147.746086 ms / tag
+jhlee@parity: ~$ 
+ejhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T01_Interlock_BM
+Tag : MMT_QFC1_T01_Interlock_BM
+BOOL 0
+1 test runs, 0.167109 seconds -> 167.109013 ms / tag
+jhlee@parity: ~$ 
+4jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T01_Interlock_BMLatch
+Tag : MMT_QFC1_T01_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.16578 seconds -> 165.779829 ms / tag
+jhlee@parity: ~$ 
+Tjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T01_Interlock_BM_Bypass
+Tag : MMT_QFC1_T01_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.173903 seconds -> 173.902988 ms / tag
+jhlee@parity: ~$ 
+ejhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T02_Interlock_BM
+Tag : MMT_QFC1_T02_Interlock_BM
+BOOL 0
+1 test runs, 0.146064 seconds -> 146.064043 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T02_Interlock_BMLatch
+Tag : MMT_QFC1_T02_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.161192 seconds -> 161.192179 ms / tag
+jhlee@parity: ~$ 
+Tjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T02_Interlock_BM_Bypass
+Tag : MMT_QFC1_T02_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.204154 seconds -> 204.154015 ms / tag
+jhlee@parity: ~$ 
+ejhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T03_Interlock_BM
+Tag : MMT_QFC1_T03_Interlock_BM
+BOOL 0
+1 test runs, 0.160282 seconds -> 160.282135 ms / tag
+jhlee@parity: ~$ 
+6jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T03_Interlock_BMLatch
+Tag : MMT_QFC1_T03_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.199342 seconds -> 199.342012 ms / tag
+jhlee@parity: ~$ 
+Tjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T03_Interlock_BM_Bypass
+Tag : MMT_QFC1_T03_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.169615 seconds -> 169.615030 ms / tag
+jhlee@parity: ~$ 
+ejhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T04_Interlock_BM
+Tag : MMT_QFC1_T04_Interlock_BM
+BOOL 0
+1 test runs, 0.188033 seconds -> 188.032866 ms / tag
+jhlee@parity: ~$ 
+7jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T04_Interlock_BMLatch
+Tag : MMT_QFC1_T04_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.150103 seconds -> 150.103092 ms / tag
+jhlee@parity: ~$ 
+Tjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T04_Interlock_BM_Bypass
+Tag : MMT_QFC1_T04_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.171618 seconds -> 171.617985 ms / tag
+jhlee@parity: ~$ 
+ejhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T05_Interlock_BM
+Tag : MMT_QFC1_T05_Interlock_BM
+BOOL 0
+1 test runs, 0.182685 seconds -> 182.685137 ms / tag
+jhlee@parity: ~$ 
+8jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T05_Interlock_BMLatch
+Tag : MMT_QFC1_T05_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.156776 seconds -> 156.776190 ms / tag
+jhlee@parity: ~$ 
+Tjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T05_Interlock_BM_Bypass
+Tag : MMT_QFC1_T05_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.156411 seconds -> 156.410933 ms / tag
+jhlee@parity: ~$ 
+ejhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T06_Interlock_BM
+Tag : MMT_QFC1_T06_Interlock_BM
+BOOL 0
+1 test runs, 0.150822 seconds -> 150.822163 ms / tag
+jhlee@parity: ~$ 
+9jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T06_Interlock_BMLatch
+Tag : MMT_QFC1_T06_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.13991 seconds -> 139.909983 ms / tag
+jhlee@parity: ~$ 
+Tjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T06_Interlock_BM_Bypass
+Tag : MMT_QFC1_T06_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.158245 seconds -> 158.244848 ms / tag
+jhlee@parity: ~$ 
+ejhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T07_Interlock_BM
+Tag : MMT_QFC1_T07_Interlock_BM
+BOOL 0
+1 test runs, 0.17909 seconds -> 179.090023 ms / tag
+jhlee@parity: ~$ 
+0jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T07_Interlock_BMLatch
+Tag : MMT_QFC1_T07_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.140894 seconds -> 140.893936 ms / tag
+jhlee@parity: ~$ 
+Fjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T07_Interlock_BM_Bypass
+Tag : MMT_QFC1_T07_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.149148 seconds -> 149.147987 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T08_Interlock_BM
+Tag : MMT_QFC1_T08_Interlock_BM
+BOOL 0
+1 test runs, 0.195291 seconds -> 195.291042 ms / tag
+jhlee@parity: ~$ 
+3jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T08_Interlock_BMLatch
+Tag : MMT_QFC1_T08_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.15955 seconds -> 159.549952 ms / tag
+jhlee@parity: ~$ 
+-jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T08_Interlock_BM_Bypass
+Tag : MMT_QFC1_T08_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.240789 seconds -> 240.788937 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T09_Interlock_BM
+Tag : MMT_QFC1_T09_Interlock_BM
+BOOL 0
+1 test runs, 0.182953 seconds -> 182.953119 ms / tag
+jhlee@parity: ~$ 
+ojhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T09_Interlock_BMLatch
+Tag : MMT_QFC1_T09_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.178197 seconds -> 178.197145 ms / tag
+jhlee@parity: ~$ 
+Fjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T09_Interlock_BM_Bypass
+Tag : MMT_QFC1_T09_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.150416 seconds -> 150.415897 ms / tag
+jhlee@parity: ~$ 
+ejhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T10_Interlock_BM
+Tag : MMT_QFC1_T10_Interlock_BM
+BOOL 0
+1 test runs, 0.173398 seconds -> 173.398018 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T10_Interlock_BMLatch
+Tag : MMT_QFC1_T10_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.166604 seconds -> 166.604042 ms / tag
+jhlee@parity: ~$ 
+ijhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC1_T10_Interlock_BM_Bypass
+Tag : MMT_QFC1_T10_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.140614 seconds -> 140.614033 ms / tag
+jhlee@parity: ~$ 
+9jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_Disable
+Tag : MMT_QFC2_Disable
+BOOL 0
+1 test runs, 0.181903 seconds -> 181.902885 ms / tag
+jhlee@parity: ~$ 
+.jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_Enable
+Tag : MMT_QFC2_Enable
+BOOL 0
+1 test runs, 0.176671 seconds -> 176.670790 ms / tag
+jhlee@parity: ~$ 
+1jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_FM1_Flow
+Tag : MMT_QFC2_FM1_Flow
+REAL 0.000000
+1 test runs, 0.158654 seconds -> 158.653975 ms / tag
+jhlee@parity: ~$ 
+8jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_FM1_FlowAvg
+Tag : MMT_QFC2_FM1_FlowAvg
+REAL 0.000000
+1 test runs, 0.184256 seconds -> 184.256077 ms / tag
+jhlee@parity: ~$ 
+1jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_FM1_FlowLowCount
+Tag : MMT_QFC2_FM1_FlowLowCount
+SINT 0
+1 test runs, 0.19131 seconds -> 191.309929 ms / tag
+jhlee@parity: ~$ 
+ jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_FM1_FlowLowFraction
+Tag : MMT_QFC2_FM1_FlowLowFraction
+REAL 0.100000
+1 test runs, 0.141398 seconds -> 141.398191 ms / tag
+jhlee@parity: ~$ 
+5jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_FM1_FlowLowTrip
+Tag : MMT_QFC2_FM1_FlowLowTrip
+SINT 10
+1 test runs, 0.156214 seconds -> 156.213999 ms / tag
+jhlee@parity: ~$ 
+Wjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_FM1_FlowOK
+Tag : MMT_QFC2_FM1_FlowOK
+BOOL 1
+1 test runs, 0.146648 seconds -> 146.647930 ms / tag
+jhlee@parity: ~$ 
+Sjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_FM1_FlowOKLatch
+Tag : MMT_QFC2_FM1_FlowOKLatch
+BOOL 1
+1 test runs, 0.1762 seconds -> 176.199913 ms / tag
+jhlee@parity: ~$ 
+ejhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_FM1_FlowOK_Bypass
+test -i ip_address -s 0  -v 5  SNTP_MSG_CREATE
+
+ether_ip_teTag : MMT_QFC2_FM1_FlowOK_Bypass
+BOOL 0
+1 test runs, 0.14679 seconds -> 146.790028 ms / tag
+jhlee@parity: ~$ 
+sjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_FM1_FlowSMOO
+Tag : MMT_QFC2_FM1_FlowSMOO
+REAL 0.999000
+1 test runs, 0.137342 seconds -> 137.341976 ms / tag
+jhlee@parity: ~$ 
+1jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_FM1_Interlock
+Tag : MMT_QFC2_FM1_Interlock
+BOOL 0
+1 test runs, 0.145779 seconds -> 145.779133 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_FM1_Setpoint
+Tag : MMT_QFC2_FM1_Setpoint
+REAL 0.000000
+1 test runs, 0.159176 seconds -> 159.175873 ms / tag
+jhlee@parity: ~$ 
+0jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_FM1_Setpoint1
+Tag : MMT_QFC2_FM1_Setpoint1
+REAL 0.000000
+1 test runs, 0.154222 seconds -> 154.222012 ms / tag
+jhlee@parity: ~$ 
+ jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_FM1_Setpoint_HISTORY
+Tag : MMT_QFC2_FM1_Setpoint_HISTORY
+MR_Response:
+    USINT service         = 0xCC (Response to CIP_ReadData)
+    USINT reserved        = 0x00
+    USINT status          = 0x06 (Buffer too small, partial data only)
+    USINT ext. stat. size = 0
+    Data (net format) =
+    00000000 A0 02 FB 14                                     - ....
+EIP_read_tag: Failed tag : MMT_QFC2_FM1_Setpoint_HISTORY
+1 test runs, 0.164047 seconds -> 164.047003 ms / tag
+jhlee@parity: ~$ 
+ljhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_FM1_Setpoint_sequence
+Tag : MMT_QFC2_FM1_Setpoint_sequence
+SINT 0
+1 test runs, 0.180759 seconds -> 180.758953 ms / tag
+jhlee@parity: ~$ 
+_jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T01_Interlock_BM
+Tag : MMT_QFC2_T01_Interlock_BM
+BOOL 0
+1 test runs, 0.160561 seconds -> 160.561085 ms / tag
+jhlee@parity: ~$ 
+gjhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T01_Interlock_BMLatch
+Tag : MMT_QFC2_T01_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.178901 seconds -> 178.900957 ms / tag
+jhlee@parity: ~$ 
+_jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T01_Interlock_BM_Bypass
+Tag : MMT_QFC2_T01_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.191932 seconds -> 191.932201 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T02_Interlock_BM
+Tag : MMT_QFC2_T02_Interlock_BM
+BOOL 0
+1 test runs, 0.157947 seconds -> 157.947063 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T02_Interlock_BMLatch
+Tag : MMT_QFC2_T02_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.148099 seconds -> 148.098946 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T02_Interlock_BM_Bypass
+Tag : MMT_QFC2_T02_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.156789 seconds -> 156.789064 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T03_Interlock_BM
+Tag : MMT_QFC2_T03_Interlock_BM
+BOOL 0
+1 test runs, 0.141132 seconds -> 141.131878 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T03_Interlock_BMLatch
+Tag : MMT_QFC2_T03_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.13922 seconds -> 139.219999 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T03_Interlock_BM_Bypass
+Tag : MMT_QFC2_T03_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.145493 seconds -> 145.493031 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T04_Interlock_BM
+Tag : MMT_QFC2_T04_Interlock_BM
+BOOL 0
+1 test runs, 0.144514 seconds -> 144.513845 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T04_Interlock_BMLatch
+Tag : MMT_QFC2_T04_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.139535 seconds -> 139.534950 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T04_Interlock_BM_Bypass
+Tag : MMT_QFC2_T04_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.149616 seconds -> 149.616003 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T05_Interlock_BM
+Tag : MMT_QFC2_T05_Interlock_BM
+BOOL 0
+1 test runs, 0.136337 seconds -> 136.337042 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T05_Interlock_BMLatch
+Tag : MMT_QFC2_T05_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.146653 seconds -> 146.652937 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T05_Interlock_BM_Bypass
+Tag : MMT_QFC2_T05_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.148055 seconds -> 148.055077 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T06_Interlock_BM
+Tag : MMT_QFC2_T06_Interlock_BM
+BOOL 0
+1 test runs, 0.134909 seconds -> 134.908915 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T06_Interlock_BMLatch
+Tag : MMT_QFC2_T06_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.129346 seconds -> 129.346132 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T06_Interlock_BM_Bypass
+Tag : MMT_QFC2_T06_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.144281 seconds -> 144.281149 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T07_Interlock_BM
+Tag : MMT_QFC2_T07_Interlock_BM
+BOOL 0
+1 test runs, 0.141913 seconds -> 141.912937 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T07_Interlock_BMLatch
+Tag : MMT_QFC2_T07_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.157579 seconds -> 157.578945 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T07_Interlock_BM_Bypass
+Tag : MMT_QFC2_T07_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.148843 seconds -> 148.843050 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T08_Interlock_BM
+Tag : MMT_QFC2_T08_Interlock_BM
+BOOL 0
+1 test runs, 0.150117 seconds -> 150.117159 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T08_Interlock_BMLatch
+Tag : MMT_QFC2_T08_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.135028 seconds -> 135.027885 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T08_Interlock_BM_Bypass
+Tag : MMT_QFC2_T08_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.148052 seconds -> 148.051977 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T09_Interlock_BM
+Tag : MMT_QFC2_T09_Interlock_BM
+BOOL 0
+1 test runs, 0.134906 seconds -> 134.906054 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T09_Interlock_BMLatch
+Tag : MMT_QFC2_T09_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.129197 seconds -> 129.196882 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T09_Interlock_BM_Bypass
+Tag : MMT_QFC2_T09_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.14447 seconds -> 144.469976 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T10_Interlock_BM
+Tag : MMT_QFC2_T10_Interlock_BM
+BOOL 0
+1 test runs, 0.143318 seconds -> 143.318176 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T10_Interlock_BMLatch
+Tag : MMT_QFC2_T10_Interlock_BMLatch
+BOOL 0
+1 test runs, 0.141638 seconds -> 141.638041 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  MMT_QFC2_T10_Interlock_BM_Bypass
+Tag : MMT_QFC2_T10_Interlock_BM_Bypass
+BOOL 0
+1 test runs, 0.143063 seconds -> 143.063068 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _Analog_IF8
+Tag : _Analog_IF8
+REAL 0.000000
+1 test runs, 0.130634 seconds -> 130.633831 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_Card_Status
+Tag : _SD_Card_Status
+Unknown CIP struct (type 0x02A0) 0x9024: 
+1 test runs, 0.1355 seconds -> 135.499954 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_Close_Command
+Tag : _SD_Close_Command
+SINT 0
+1 test runs, 0.134287 seconds -> 134.287119 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_current_bytes_RW
+Tag : _SD_current_bytes_RW
+DINT 440
+1 test runs, 0.130062 seconds -> 130.061865 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_current_data
+Tag : _SD_current_data
+SINT 6
+1 test runs, 0.136382 seconds -> 136.382103 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_current_filename
+Tag : _SD_current_filename
+Unknown CIP struct (type 0x02A0) 0xDC7F: 
+1 test runs, 0.136569 seconds -> 136.568785 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_Del_Command_Data
+Tag : _SD_Del_Command_Data
+SINT 0
+1 test runs, 0.131614 seconds -> 131.613970 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_Execute_Create_File
+Tag : _SD_Execute_Create_File
+BOOL 0
+1 test runs, 0.14406 seconds -> 144.059896 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_Execute_Delete_File
+Tag : _SD_Execute_Delete_File
+BOOL 0
+1 test runs, 0.141402 seconds -> 141.402006 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_Execute_Read_Data
+Tag : _SD_Execute_Read_Data
+BOOL 0
+1 test runs, 0.14514 seconds -> 145.140171 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_Execute_Write_Data
+Tag : _SD_Execute_Write_Data
+BOOL 0
+1 test runs, 0.138836 seconds -> 138.835907 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_File_Write_Results
+Tag : _SD_File_Write_Results
+DINT 0
+1 test runs, 0.144754 seconds -> 144.754171 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_FS_Command_Data
+Tag : _SD_FS_Command_Data
+SINT 0
+1 test runs, 0.156829 seconds -> 156.829119 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_FS_Results
+Tag : _SD_FS_Results
+DINT 0
+1 test runs, 0.14107 seconds -> 141.070127 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_Open_Command_Data
+Tag : _SD_Open_Command_Data
+SINT 0
+1 test runs, 0.13836 seconds -> 138.360023 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_Open_Results
+Tag : _SD_Open_Results
+SINT 0
+1 test runs, 0.135619 seconds -> 135.618925 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_Read_Buffer
+Tag : _SD_Read_Buffer
+SINT 0
+1 test runs, 0.133392 seconds -> 133.391857 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_Read_Command_Data
+Tag : _SD_Read_Command_Data
+SINT 0
+1 test runs, 0.13829 seconds -> 138.289928 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_Read_History
+Tag : _SD_Read_History
+BOOL 1
+1 test runs, 0.140094 seconds -> 140.094042 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_RW_InProgress
+Tag : _SD_RW_InProgress
+BOOL 1
+1 test runs, 0.138144 seconds -> 138.144016 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_RW_Status
+Tag : _SD_RW_Status
+SINT 1
+1 test runs, 0.147827 seconds -> 147.826910 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_Write_Buffer
+Tag : _SD_Write_Buffer
+SINT 0
+1 test runs, 0.161857 seconds -> 161.856890 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  SNTP_MSG_CREATE
+Tag : SNTP_MSG_CREATE
+MR_Response:
+    USINT service         = 0xCC (Response to CIP_ReadData)
+    USINT reserved        = 0x00
+    USINT status          = 0x04 (Unknown tag or Path error)
+    USINT ext. stat. size = 1
+    ext. status           = 0x0000
+EIP_read_tag: Failed tag : SNTP_MSG_CREATE
+1 test runs, 0.137138 seconds -> 137.137890 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  SNTP_MSG_DELETE
+Tag : SNTP_MSG_DELETE
+MR_Response:
+    USINT service         = 0xCC (Response to CIP_ReadData)
+    USINT reserved        = 0x00
+    USINT status          = 0x04 (Unknown tag or Path error)
+    USINT ext. stat. size = 1
+    ext. status           = 0x0000
+EIP_read_tag: Failed tag : SNTP_MSG_DELETE
+1 test runs, 0.133444 seconds -> 133.444071 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  SNTP_MSG_OPEN
+Tag : SNTP_MSG_OPEN
+MR_Response:
+    USINT service         = 0xCC (Response to CIP_ReadData)
+    USINT reserved        = 0x00
+    USINT status          = 0x04 (Unknown tag or Path error)
+    USINT ext. stat. size = 1
+    ext. status           = 0x0000
+EIP_read_tag: Failed tag : SNTP_MSG_OPEN
+1 test runs, 0.13391 seconds -> 133.909941 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  SNTP_MSG_READ
+Tag : SNTP_MSG_READ
+MR_Response:
+    USINT service         = 0xCC (Response to CIP_ReadData)
+    USINT reserved        = 0x00
+    USINT status          = 0x04 (Unknown tag or Path error)
+    USINT ext. stat. size = 1
+    ext. status           = 0x0000
+EIP_read_tag: Failed tag : SNTP_MSG_READ
+1 test runs, 0.139155 seconds -> 139.154911 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  SNTP_MSG_WRITE
+Tag : SNTP_MSG_WRITE
+MR_Response:
+    USINT service         = 0xCC (Response to CIP_ReadData)
+    USINT reserved        = 0x00
+    USINT status          = 0x04 (Unknown tag or Path error)
+    USINT ext. stat. size = 1
+    ext. status           = 0x0000
+EIP_read_tag: Failed tag : SNTP_MSG_WRITE
+1 test runs, 0.137835 seconds -> 137.835026 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_Close_File_Message
+Tag : _SD_Close_File_Message
+MR_Response:
+    USINT service         = 0xCC (Response to CIP_ReadData)
+    USINT reserved        = 0x00
+    USINT status          = 0x0F (<unknown>)
+    USINT ext. stat. size = 1
+    ext. status           = 0x2100
+EIP_read_tag: Failed tag : _SD_Close_File_Message
+1 test runs, 0.138023 seconds -> 138.022900 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_Delete_File_Message
+Tag : _SD_Delete_File_Message
+MR_Response:
+    USINT service         = 0xCC (Response to CIP_ReadData)
+    USINT reserved        = 0x00
+    USINT status          = 0x0F (<unknown>)
+    USINT ext. stat. size = 1
+    ext. status           = 0x2100
+EIP_read_tag: Failed tag : _SD_Delete_File_Message
+1 test runs, 0.135925 seconds -> 135.924816 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_Open_File_Message
+Tag : _SD_Open_File_Message
+MR_Response:
+    USINT service         = 0xCC (Response to CIP_ReadData)
+    USINT reserved        = 0x00
+    USINT status          = 0x0F (<unknown>)
+    USINT ext. stat. size = 1
+    ext. status           = 0x2100
+EIP_read_tag: Failed tag : _SD_Open_File_Message
+1 test runs, 0.129792 seconds -> 129.791975 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_Present_Message
+Tag : _SD_Present_Message
+MR_Response:
+    USINT service         = 0xCC (Response to CIP_ReadData)
+    USINT reserved        = 0x00
+    USINT status          = 0x0F (<unknown>)
+    USINT ext. stat. size = 1
+    ext. status           = 0x2100
+EIP_read_tag: Failed tag : _SD_Present_Message
+1 test runs, 0.151988 seconds -> 151.988029 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_Read_File_Message
+Tag : _SD_Read_File_Message
+MR_Response:
+    USINT service         = 0xCC (Response to CIP_ReadData)
+    USINT reserved        = 0x00
+    USINT status          = 0x0F (<unknown>)
+    USINT ext. stat. size = 1
+    ext. status           = 0x2100
+EIP_read_tag: Failed tag : _SD_Read_File_Message
+1 test runs, 0.131641 seconds -> 131.640911 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ ether_ip_test -i ip_address -s 0  -v 5  _SD_Write_File_Message
+Tag : _SD_Write_File_Message
+MR_Response:
+    USINT service         = 0xCC (Response to CIP_ReadData)
+    USINT reserved        = 0x00
+    USINT status          = 0x0F (<unknown>)
+    USINT ext. stat. size = 1
+    ext. status           = 0x2100
+EIP_read_tag: Failed tag : _SD_Write_File_Message
+1 test runs, 0.141516 seconds -> 141.515970 ms / tag
+jhlee@parity: ~$ 
+jhlee@parity: ~$ 

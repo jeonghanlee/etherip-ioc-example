@@ -1,0 +1,87 @@
+
+# BOOL
+# READ ONLY
+
+record(bi, "$(P)MMT_DIPB1_FM1_FlowOK")
+{
+	field(SCAN, ".5 second")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_FM1_FlowOK")
+	field(ZNAM, "False")
+	field(ONAM, "True")
+	field( ZSV, "NO_ALARM")
+	field( OSV, "MAJOR")
+}
+
+record(bi, "$(P)MMT_DIPB1_FM1_FlowOKLatch")
+{
+	field(SCAN, ".5 second")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_FM1_FlowOKLatch")
+	field(ZNAM, "False")
+	field(ONAM, "True")
+	field( ZSV, "NO_ALARM")
+	field( OSV, "MAJOR")
+}
+
+record(bi, "$(P)MMT_DIPB1_FM1_Interlock")
+{
+	field(SCAN, ".5 second")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_FM1_Interlock")
+	field(ZNAM, "False")
+	field(ONAM, "True")
+	field( ZSV, "NO_ALARM")
+	field( OSV, "MAJOR")
+}
+
+
+
+# BOOL
+# READ ONLY
+
+record(bi, "$(P)MMT_DIPB1_FM2_FlowOK")
+{
+	field(SCAN, ".5 second")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_FM2_FlowOK")
+	field(ZNAM, "False")
+	field(ONAM, "True")
+	field( ZSV, "NO_ALARM")
+	field( OSV, "MAJOR")
+}
+
+record(bi, "$(P)MMT_DIPB1_FM2_FlowOKLatch")
+{
+	field(SCAN, ".5 second")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_FM2_FlowOKLatch")
+	field(ZNAM, "False")
+	field(ONAM, "True")
+	field( ZSV, "NO_ALARM")
+	field( OSV, "MAJOR")
+}
+
+record(bi, "$(P)MMT_DIPB1_FM2_Interlock")
+{
+	field(SCAN, ".5 second")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_FM2_Interlock")
+	field(ZNAM, "False")
+	field(ONAM, "True")
+	field( ZSV, "NO_ALARM")
+	field( OSV, "MAJOR")
+}
+
+
+record(bi, "$(P)MMT_DIPB1_FM2_Interlock")
+{
+	field(SCAN, ".5 second")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_FM2_Interlock")
+	field(ZNAM, "False")
+	field(ONAM, "True")
+	field(ZSV,  "NO_ALARM")
+	field(OSV,  "MAJOR")
+}
+

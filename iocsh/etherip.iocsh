@@ -1,0 +1,5 @@
+
+EIP_buffer_limit($(BUFFER_LIMIT=450))
+drvEtherIP_init()
+EIP_verbosity($(VERBOSITY=7))
+drvEtherIP_define_PLC("$(NAME)", "$(INET)", "$(SLOT=0)")

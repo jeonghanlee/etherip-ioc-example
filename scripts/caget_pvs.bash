@@ -18,14 +18,27 @@
 #
 # Author  : Jeong Han Lee
 # email   : jeonghan.lee@gmail.com
-# Date    : Monday, April 20 16:40:43 PDT 2020
-# version : 1.0.7
+# Date    : 
+# version : 2.0.2
 
-declare -gr SC_SCRIPT="$(realpath "$0")"
-declare -gr SC_SCRIPTNAME=${0##*/}
-declare -gr SC_TOP="${SC_SCRIPT%/*}"
+declare -g SC_SCRIPT;
+#declare -g SC_SCRIPTNAME;
+#declare -g SC_TOP;
+#declare -g LOGDATE;
+
+SC_SCRIPT="$(realpath "$0")";
+#SC_SCRIPTNAME=${0##*/};
+#SC_TOP="${SC_SCRIPT%/*}"
+#LOGDATE="$(date +%y%m%d%H%M)"
+
+
+function pushd { builtin pushd "$@" > /dev/null || exit; }
+function popd  { builtin popd  > /dev/null || exit; }
+
 
 declare -a pvlist=();
+
+
 
 function usage
 {
@@ -48,6 +61,12 @@ function usage
     exit 1; 
 }
 
+function get_host_ip
+{
+	local host_ip=""
+	host_ip=$(ip -4 route get 8.8.8.8 |  grep -Po 'src \K[\d.]+')
+	echo "$host_ip"
+}
 
 function print_ca_addr
 {
@@ -78,12 +97,11 @@ function reset_ca_addr
     local auto_addr="$1"; shift;
     printf ">> Reset EPICS CA ADDR ..... \n";
     print_ca_addr "Before Reset"
-    _HOST_IP="$(ip -4 route get 8.8.8.8 | awk {'print $7'} | tr -d '\n')";
+    _HOST_IP=$(get_host_ip) 
     unset_ca_addr 
     set_ca_addr "$_HOST_IP" "$auto_addr"
     print_ca_addr "After  Reset"
 }
-
 
 function pvs_from_list
 {
@@ -94,32 +112,32 @@ function pvs_from_list
     local filter="$2"
     local raw_pvlist=();
     local temp_pvlist=();
-    let i=0
+    ((i=0))
     while IFS= read -r line_data; do
-	if [ "$line_data" ]; then
-	    [[ "$line_data" =~ ^#.*$ ]] && continue
-	    raw_pvlist[i]="${line_data}"
-	    ((++i))
-	fi
+		if [ "$line_data" ]; then
+	    	[[ "$line_data" =~ ^#.*$ ]] && continue
+	    	raw_pvlist[i]="${line_data}"
+	    	((++i))
+		fi
     done < "${filename}"
 
     # https://stackoverflow.com/questions/7442417/how-to-sort-an-array-in-bash
     IFS=$'\n' read -d '' -r -a temp_pvlist < <(printf '%s\n' "${raw_pvlist[@]}" | sort)
 
     if [ -z "$filter" ]; then
-	let i=0;
-	for pv in ${temp_pvlist[@]}; do
-	    pvlist[i]="$pv"
-	    ((++i))
-	done
+		((i=0));
+		for pv in "${temp_pvlist[@]}"; do
+	    	pvlist[i]="$pv"
+	    	((++i))
+		done
     else
-	let j=0
-	for pv in ${temp_pvlist[@]}; do
-	    if test "${pv#*$filter}" != "$pv"; then
-		pvlist[j]="$pv"
-		((++j))
-	    fi
-	done
+		((j=0));
+		for pv in "${temp_pvlist[@]}"; do
+	    	if test "${pv#*$filter}" != "$pv"; then
+				pvlist[j]="$pv"
+				((++j))
+	    	fi
+		done
     fi
     
 }
@@ -129,17 +147,17 @@ function getValue_pvlist
     local pv;
     local sleep_interval=.001
     printf "\n>> Selected PV and its value with %s\n" "${GET_CMD}"
-    if hash ${GET_CMD} 2>/dev/null ; then
-	for pv in ${pvlist[@]}; do
-	    ${GET_CMD} "$pv"
-	    sleep ${sleep_interval}
-	done
+    if hash "${GET_CMD}" 2>/dev/null ; then
+		for pv in "${pvlist[@]}"; do
+	   		${GET_CMD} "$pv"
+	    	sleep ${sleep_interval}
+		done
     else
-	printf "\n>>>> We cannot run $0\n";
-	printf "     because we cannot find $GET_CMD in the system\n"
-	printf "     please source setE3Env.bash first\n"
-	printf "\n"
-	exit;
+		printf "\n>>>> We cannot run %\n" "$SC_SCRIPT"
+		printf "     because we cannot find %s in the system\n" "$GET_CMD"
+		printf "     please set EPICS environment first\n"
+		printf "\n"
+		exit;
     fi
     printf "\n";
 }
@@ -157,25 +175,25 @@ SUBSTRING=""
 AUTO_ADDR="YES"
 
 while getopts "${options}" opt; do
-    case "${opt}" in
-        l) LIST=${OPTARG}      ;;
-	w) WATCH=${OPTARG}     ;;
-	f) SUBSTRING=${OPTARG} ;;
- 	c) RESETCA="YES"       ;;
-	n) AUTO_ADDR="NO"  ;;
-	7) GET_CMD="pvget"     ;;
-   	:)
-	    echo "Option -$OPTARG requires an argument." >&2
-	    usage
-	    ;;
-	h)
-	    usage
-	    ;;
-	\?)
-	    echo "Invalid option: -$OPTARG" >&2
-	    usage
-	    ;;
-    esac
+	case "${opt}" in
+		l) LIST=${OPTARG}      ;;
+		w) WATCH=${OPTARG}     ;;
+		f) SUBSTRING=${OPTARG} ;;
+		c) RESETCA="YES"       ;;
+		n) AUTO_ADDR="NO"      ;;
+		7) GET_CMD="pvget"     ;;
+		:)
+			echo "Option -$OPTARG requires an argument." >&2
+			usage
+			;;
+		h)
+			usage
+			;;
+		\?)
+			echo "Invalid option: -$OPTARG" >&2
+			usage
+			;;
+	esac
 done
 shift $((OPTIND-1))
 
@@ -184,9 +202,7 @@ if [ -z "$LIST" ]; then
     usage;
 fi
 
-
 if [ "$RESETCA" == "YES" ]; then
-    
     reset_ca_addr "${AUTO_ADDR}";
     sleep 2;
     clear;
@@ -206,8 +222,8 @@ else
 	clear;
 	printf "Fake watch with the sleep interval %s (The offset %s is introduced). \n" "${interval}" "${offset}"
 	printf "%s\n" "$LOG_DATE";
-	printf "$GET_LIST\n";
-	sleep ${interval}
+	printf "%s\n" "$GET_LIST"
+	sleep "${interval}"
     done;
-    
 fi
+
