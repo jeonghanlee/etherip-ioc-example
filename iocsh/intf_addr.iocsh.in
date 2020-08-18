@@ -1,0 +1,3 @@
+#-
+epicsEnvSet("EPICS_CAS_INTF_ADDR_LIST","@HOST_IP@")
+#-EOF

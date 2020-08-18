@@ -1,0 +1,67 @@
+
+record(bo, "$(P)MMT_DIPB1_Disable-SP")
+{
+
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+	field( OUT, "@$(PLC) MMT_DIPB1_Disable S 1")
+	field(ZNAM, "Enable")
+	field(ONAM, "Disable")
+    field(FLNK, "$(P)MMT_DIPB1_Disable-RB")
+}
+
+record(bi, "$(P)MMT_DIPB1_Disable-RB")
+{
+	field(SCAN, "I/O Intr")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_Disable S 1")
+	field(ZNAM, "Enable")
+	field(ONAM, "Disable")
+    field(FLNK, "$(P)MMT_DIPB1_Disable-RB_")
+}
+
+
+# we might not need the following sync logic between SP and RB,
+# because of the internal scan rate if SCAN is I/O Intr and PASSIVE
+#
+record(longout, "$(P)MMT_DIPB1_Disable-RB_") 
+{
+	field( DOL, "$(P)MMT_DIPB1_Disable-RB NPP")
+	field(OMSL, "closed_loop")
+	field( OUT, "$(P)MMT_DIPB1_Disable-SP NPP")
+}
+
+
+### 
+record(bo, "$(P)MMT_DIPB1_Enable-SP")
+{
+
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+	field( OUT, "@$(PLC) MMT_DIPB1_Enable S 1")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+    field(FLNK, "$(P)MMT_DIPB1_Enable-RB")
+}
+
+record(bi, "$(P)MMT_DIPB1_Enable-RB")
+{
+	field(SCAN, "I/O Intr")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_Enable S 1")
+	field(ZNAM, "Disable")
+	field(ONAM, "Enable")
+    field(FLNK, "$(P)MMT_DIPB1_Enable-RB_")
+}
+
+
+# we might not need the following sync logic between SP and RB,
+# because of the internal scan rate if SCAN is I/O Intr and PASSIVE
+#
+record(longout, "$(P)MMT_DIPB1_Enable-RB_") 
+{
+	field( DOL, "$(P)MMT_DIPB1_Enable-RB NPP")
+	field(OMSL, "closed_loop")
+	field( OUT, "$(P)MMT_DIPB1_Enable-SP NPP")
+}
+

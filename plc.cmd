@@ -9,19 +9,26 @@ epicsEnvSet("DEVDI",     "ABPLC")
 epicsEnvSet("IOCNAME",   "$(SYSSUBSYS):$(DEVDI)")
 epicsEnvSet("USERNAME",  "${USER}")
 
-
-
-
-# Load dbd, register the drvEtherIP.. commands
+ Load dbd, register the drvEtherIP.. commands
 dbLoadDatabase("$(MOD_TOP)/dbd/eipIoc.dbd")
 eipIoc_registerRecordDeviceDriver(pdbbase)
 
 epicsEnvSet("PLC_NAME", "ABPLC-B46")
+
+
+system "bash $(CWD)/scripts/host_ip.bash"
+
+iocshLoad("$(CWD)/iocsh/intf_addr.iocsh")
+
 iocshLoad("$(CWD)/iocsh/plcinfo.iocsh")
+
+
+
 iocshLoad("$(CWD)/iocsh/etherip.iocsh", "NAME=$(PLC_NAME),INET=$(PLC_INET)")
 
 dbLoadRecords("$(DB_TOP)/mmt_bi.db", "P=$(IOCNAME):,PLC=$(PLC_NAME)")
 dbLoadRecords("$(DB_TOP)/mmt_ai.db", "P=$(IOCNAME):,PLC=$(PLC_NAME)")
+dbLoadRecords("$(DB_TOP)/mmt_bi_bo.db", "P=$(IOCNAME):,PLC=$(PLC_NAME)")
 
 iocInit()
 
