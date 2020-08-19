@@ -19,7 +19,7 @@
 # Author  : Jeong Han Lee
 # email   : jeonghan.lee@gmail.com
 # Date    : 
-# version : 2.0.2
+# version : 2.0.3
 
 declare -g SC_SCRIPT;
 #declare -g SC_SCRIPTNAME;
@@ -144,12 +144,13 @@ function pvs_from_list
 
 function getValue_pvlist
 {
+	# Suppress errors, so we can only see working caget results
     local pv;
     local sleep_interval=.001
     printf "\n>> Selected PV and its value with %s\n" "${GET_CMD}"
     if hash "${GET_CMD}" 2>/dev/null ; then
 		for pv in "${pvlist[@]}"; do
-	   		${GET_CMD} "$pv"
+	   		${GET_CMD} "$pv" 2>/dev/null
 	    	sleep ${sleep_interval}
 		done
     else

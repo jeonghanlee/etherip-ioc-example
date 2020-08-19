@@ -36,6 +36,42 @@ record(bi, "$(P)MMT_DIPB1_FM1_Interlock")
 }
 
 
+# Bool
+# Read / Write
+record(bo, "$(P)MMT_DIPB1_FM1_FlowOK_Bypass-SP")
+{
+
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+	field( OUT, "@$(PLC) MMT_DIPB1_FM1_FlowOK_Bypass S 1")
+	field(ZNAM, "Enable")
+	field(ONAM, "Disable")
+    field(FLNK, "$(P)MMT_DIPB1_Disable-RB")
+}
+
+record(bi, "$(P)MMT_DIPB1_FM1_FlowOK_Bypass-RB")
+{
+	field(SCAN, "I/O Intr")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_FM1_FlowOK_Bypass S 1")
+	field(ZNAM, "Enable")
+	field(ONAM, "Disable")
+    field(FLNK, "$(P)MMT_DIPB1_FM1_FlowOK_Bypass-RB_")
+}
+
+
+# we might not need the following sync logic between SP and RB,
+# because of the internal scan rate if SCAN is I/O Intr and PASSIVE
+#
+record(longout, "$(P)MMT_DIPB1_FM1_FlowOK_Bypass-RB_") 
+{
+	field( DOL, "$(P)MMT_DIPB1_FM1_FlowOK_Bypass-RB NPP")
+	field(OMSL, "closed_loop")
+	field( OUT, "$(P)MMT_DIPB1_FM1_FlowOK_Bypass NPP")
+}
+
+
+
 
 # BOOL
 # READ ONLY
@@ -84,4 +120,61 @@ record(bi, "$(P)MMT_DIPB1_FM2_Interlock")
 	field(ZSV,  "NO_ALARM")
 	field(OSV,  "MAJOR")
 }
+
+
+# Bool
+# Read / Write
+record(bo, "$(P)MMT_DIPB1_FM2_FlowOK_Bypass-SP")
+{
+   field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+	field( OUT, "@$(PLC) MMT_DIPB1_FM2_FlowOK_Bypass S 1")
+	field(ZNAM, "Enable")
+	field(ONAM, "Disable")
+   field(FLNK, "$(P)MMT_DIPB1_Disable-RB")
+}
+record(bi, "$(P)MMT_DIPB1_FM2_FlowOK_Bypass-RB")
+{
+	field(SCAN, "I/O Intr")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_FM2_FlowOK_Bypass S 1")
+	field(ZNAM, "Enable")
+	field(ONAM, "Disable")
+   field(FLNK, "$(P)MMT_DIPB1_FM2_FlowOK_Bypass-RB_")
+}
+# we might not need the following sync logic between SP and RB,
+# because of the internal scan rate if SCAN is I/O Intr and PASSIVE
+#
+record(longout, "$(P)MMT_DIPB1_FM2_FlowOK_Bypass-RB_") 
+{
+	field( DOL, "$(P)MMT_DIPB1_FM2_FlowOK_Bypass-RB NPP")
+	field(OMSL, "closed_loop")
+	field( OUT, "$(P)MMT_DIPB1_FM2_FlowOK_Bypass NPP")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

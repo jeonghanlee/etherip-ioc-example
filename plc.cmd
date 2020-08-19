@@ -9,7 +9,7 @@ epicsEnvSet("DEVDI",     "ABPLC")
 epicsEnvSet("IOCNAME",   "$(SYSSUBSYS):$(DEVDI)")
 epicsEnvSet("USERNAME",  "${USER}")
 
- Load dbd, register the drvEtherIP.. commands
+
 dbLoadDatabase("$(MOD_TOP)/dbd/eipIoc.dbd")
 eipIoc_registerRecordDeviceDriver(pdbbase)
 
@@ -26,9 +26,9 @@ iocshLoad("$(CWD)/iocsh/plcinfo.iocsh")
 
 iocshLoad("$(CWD)/iocsh/etherip.iocsh", "NAME=$(PLC_NAME),INET=$(PLC_INET)")
 
-dbLoadRecords("$(DB_TOP)/mmt_bi.db", "P=$(IOCNAME):,PLC=$(PLC_NAME)")
-dbLoadRecords("$(DB_TOP)/mmt_ai.db", "P=$(IOCNAME):,PLC=$(PLC_NAME)")
 dbLoadRecords("$(DB_TOP)/mmt_bi_bo.db", "P=$(IOCNAME):,PLC=$(PLC_NAME)")
+dbLoadRecords("$(DB_TOP)/mmt_dipb.db", "P=$(IOCNAME):,PLC=$(PLC_NAME),ID=1")
+dbLoadRecords("$(DB_TOP)/mmt_dipb.db", "P=$(IOCNAME):,PLC=$(PLC_NAME),ID=2")
 
 iocInit()
 

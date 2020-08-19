@@ -1,0 +1,209 @@
+# BOOL
+# READ ONLY
+
+record(bi, "$(P)MMT_DIPB1_FM$(ID)_FlowOK")
+{
+	field(SCAN, ".5 second")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_FM$(ID)_FlowOK")
+	field(ZNAM, "False")
+	field(ONAM, "True")
+	field( ZSV, "NO_ALARM")
+	field( OSV, "MAJOR")
+}
+
+record(bi, "$(P)MMT_DIPB1_FM$(ID)_FlowOKLatch")
+{
+	field(SCAN, ".5 second")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_FM$(ID)_FlowOKLatch")
+	field(ZNAM, "False")
+	field(ONAM, "True")
+	field( ZSV, "NO_ALARM")
+	field( OSV, "MAJOR")
+}
+
+record(bi, "$(P)MMT_DIPB1_FM$(ID)_Interlock")
+{
+	field(SCAN, ".5 second")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_FM$(ID)_Interlock")
+	field(ZNAM, "False")
+	field(ONAM, "True")
+	field( ZSV, "NO_ALARM")
+	field( OSV, "MAJOR")
+}
+
+
+# Bool
+# Read / Write
+record(bo, "$(P)MMT_DIPB1_FM$(ID)_FlowOK_Bypass-SP")
+{
+
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+	field( OUT, "@$(PLC) MMT_DIPB1_FM$(ID)_FlowOK_Bypass S 1")
+	field(ZNAM, "Enable")
+	field(ONAM, "Disable")
+    field(FLNK, "$(P)MMT_DIPB1_Disable-RB")
+}
+
+record(bi, "$(P)MMT_DIPB1_FM$(ID)_FlowOK_Bypass-RB")
+{
+	field(SCAN, "I/O Intr")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_FM$(ID)_FlowOK_Bypass S 1")
+	field(ZNAM, "Enable")
+	field(ONAM, "Disable")
+    field(FLNK, "$(P)MMT_DIPB1_FM$(ID)_FlowOK_Bypass-RB_")
+}
+
+
+# we might not need the following sync logic between SP and RB,
+# because of the internal scan rate if SCAN is I/O Intr and PASSIVE
+#
+record(longout, "$(P)MMT_DIPB1_FM$(ID)_FlowOK_Bypass-RB_") 
+{
+	field( DOL, "$(P)MMT_DIPB1_FM$(ID)_FlowOK_Bypass-RB NPP")
+	field(OMSL, "closed_loop")
+	field( OUT, "$(P)MMT_DIPB1_FM$(ID)_FlowOK_Bypass NPP")
+}
+
+## TAG : MMT_DIPB1_FM$(ID)_FlowSMOO
+## REAL
+## R/W
+record(ao, "$(P)MMT_DIPB1_FM$(ID)_FlowSMOO-SP")
+{
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+    field( OUT, "@$(PLC) MMT_DIPB1_FM$(ID)_FlowSMOO S 1")
+	field(HOPR, "1.0")
+	field(LOPR, "0.0")
+}
+
+record(ai, "$(P)MMT_DIPB1_FM$(ID)_FlowSMOO-RB")
+{
+    field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_FM$(ID)_FlowSMOO")
+}
+
+
+
+## TAG : MMT_DIPB1_FM1_FlowLowFraction
+## REAL
+## R/W
+record(ao, "$(P)MMT_DIPB1_FM$(ID)_FlowLowFraction-SP")
+{
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+    field( OUT, "@$(PLC) MMT_DIPB1_FM$(ID)_FlowLowFraction S 1")
+	field(HOPR, "1.0")
+	field(LOPR, "0.0")
+}
+
+record(ai, "$(P)MMT_DIPB1_FM$(ID)_FlowLowFraction-RB")
+{
+    field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_FM$(ID)_FlowLowFraction")
+}
+
+
+## TAG : MMT_DIPB1_FM$(ID)_Setpoint
+## REAL
+## R/W
+record(ao, "$(P)MMT_DIPB1_FM$(ID)_Setpoint-SP")
+{
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+    field( OUT, "@$(PLC) MMT_DIPB1_FM$(ID)_Setpoint S 1")
+	field(HOPR, "1.0")
+	field(LOPR, "0.0")
+}
+
+record(ai, "$(P)MMT_DIPB1_FM$(ID)_Setpoint-RB")
+{
+    field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_FM$(ID)_Setpoint")
+}
+
+
+
+
+## TAG : MMT_DIPB1_FM$(ID)_Setpoint
+## REAL
+## R/W
+record(ao, "$(P)MMT_DIPB1_FM$(ID)_Setpoint1-SP")
+{
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+    field( OUT, "@$(PLC) MMT_DIPB1_FM$(ID)_Setpoint1 S 1")
+	field(HOPR, "1.0")
+	field(LOPR, "0.0")
+}
+
+record(ai, "$(P)MMT_DIPB1_FM$(ID)_Setpoint1-RB")
+{
+    field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_FM$(ID)_Setpoint1")
+}
+
+
+
+## SINT : Signed 8–bit integer value
+## READ
+## TAG : MMT_DIPB1_FM1_FlowLowCount
+
+record(ai, "$(P)MMT_DIPB1_FM$(ID)_FlowLowCount-RB")
+{
+    field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_FM$(ID)_FlowLowCount")
+}
+
+## SINT : Signed 8–bit integer value
+## READ/WRITE
+## TAG  : MMT_DIPB1_FM1_FlowLowTrip
+record(ao, "$(P)MMT_DIPB1_FM$(ID)_FlowLowTrip-SP")
+{
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+    field( OUT, "@$(PLC) MMT_DIPB1_FM$(ID)_FlowLowTrip S 1")
+}
+
+record(ai, "$(P)MMT_DIPB1_FM$(ID)_FlowLowTrip-RB")
+{
+    field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_FM$(ID)_FlowLowTrip")
+}
+
+## SINT : Signed 8–bit integer value
+## READ
+## TAG : MMT_DIPB1_FM1_Setpoint_sequence
+
+record(ai, "$(P)MMT_DIPB1_FM$(ID)_Setpoint_sequence-RB")
+{
+    field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) MMT_DIPB1_FM$(ID)_Setpoint_sequence")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
