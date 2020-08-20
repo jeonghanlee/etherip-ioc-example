@@ -197,6 +197,20 @@ record(ai, "$(P)MMT_DIPB1_FM$(ID)_Setpoint_sequence-RB")
 
 
 
+#MMT_DIPB1_FM1_Flow
+record(ao, "$(P)MMT_DIPB1_FM$(ID)_Flow-SP")
+{
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+    field( OUT, "@$(PLC) MMT_DIPB1_FM$(ID)_Flow S 1")
+}
+
+record(ai, "$(P)MMT_DIPB1_FM$(ID)_Flow-RB")
+{
+    field(SCAN, "I/O Intr")
+	field(DTYP, "EtherIP")
+    field( INP, "@$(PLC) MMT_DIPB1_FM$(ID)_Flow S 1")
+}
 
 
 

@@ -26,6 +26,7 @@ iocshLoad("$(CWD)/iocsh/plcinfo.iocsh")
 
 iocshLoad("$(CWD)/iocsh/etherip.iocsh", "NAME=$(PLC_NAME),INET=$(PLC_INET)")
 
+dbLoadRecords("$(DB_TOP)/ab_hardware.db","P=$(IOCNAME):,PLC=$(PLC_NAME)")
 dbLoadRecords("$(DB_TOP)/mmt_bi_bo.db", "P=$(IOCNAME):,PLC=$(PLC_NAME)")
 dbLoadRecords("$(DB_TOP)/mmt_dipb.db", "P=$(IOCNAME):,PLC=$(PLC_NAME),ID=1")
 dbLoadRecords("$(DB_TOP)/mmt_dipb.db", "P=$(IOCNAME):,PLC=$(PLC_NAME),ID=2")

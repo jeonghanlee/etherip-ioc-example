@@ -1,0 +1,260 @@
+
+## LINT : Signed 64–bit integer value
+## READ
+## TAG : MMT_DIPB1_FM1_FlowLowCount
+## LINT : 0x00C5 isn't in the support data type
+## We get following messages in ioc
+## EIP get_CIP_UDINT: unknown type 197
+#record(ai, "$(P)CurrentTime")
+#{
+#    field(SCAN, "1 second")
+#	field(DTYP, "EtherIP")
+#	field( INP, "@$(PLC) CurrentTime")
+#}
+
+
+record(ai, "$(P)Delay_in_microseconds")
+{
+    field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) Delay_in_microseconds")
+}
+
+## DINT : 
+## C4  Signed 32–bit integer value
+record(ai, "$(P)_SD_current_bytes_RW")
+{
+    field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) _SD_current_bytes_RW")
+}
+
+### String140
+### IP get_CIP_STRING: unknown subtype 56447
+#record(stringin, "$(P)_SD_current_filename")
+#{
+#    field(SCAN, "1 second")
+#	field(DTYP, "EtherIP")
+#	field( INP, "@$(PLC) _SD_current_filename")
+#}
+
+### SINT
+record(ai, "$(P)_SD_RW_Status_")
+{
+    field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) _SD_RW_Status")
+}
+
+record(mbbi, "$(P)_SD_RW_Status")
+{
+    field(DTYP, "Soft Channel")
+    field( INP, "$(P)_SD_RW_Status_ CPP")
+    field(ZRST, "idle")
+    field(ZRVL, "0")
+    field(ONST, "reading")
+    field(ONVL, "1")
+    field(TWST, "writing")
+    field(TWVL, "2")
+    field(THST, "read error")
+    field(THVL, "-1")
+    field(FRST, "write error")
+    field(FRVL, "-2")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##SINT[4950]
+## 20c2
+#record(waveform, "$(IOC)_SD_current_data")
+#{
+#	field(SCAN, "1 second")
+#	field(DTYP, "EtherIP")
+#	field(INP, "@$(PLC) _SD_current_data")
+#	field(NELM, "4950")
+#	field(FTVL, "LONG")
+#}
+
+
+record(ai, "$(P)Program_SDReadWriteProgram_Read_Temp0")
+{
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+    field( INP, "@$(PLC) Program:SDReadWriteProgram.Read_Temp[0] S 1")
+}
+
+
+record(ai, "$(P)Program_SDReadWriteProgram_Read_Temp1")
+{
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+    field( INP, "@$(PLC) Program:SDReadWriteProgram.Read_Temp[1] S 1")
+}
+
+
+record(ai, "$(P)Program_SDReadWriteProgram_Read_Temp2")
+{
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+    field( INP, "@$(PLC) Program:SDReadWriteProgram.Read_Temp[2] S 1")
+}
+
+
+record(ai, "$(P)Program_SDReadWriteProgram_Read_Temp3")
+{
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+    field( INP, "@$(PLC) Program:SDReadWriteProgram.Read_Temp[3] S 1")
+}
+
+
+record(ai, "$(P)Program_SDReadWriteProgram_Read_Temp4")
+{
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+    field( INP, "@$(PLC) Program:SDReadWriteProgram.Read_Temp[4] S 1")
+}
+
+
+record(ai, "$(P)Program_SDReadWriteProgram_Read_Temp5")
+{
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+    field( INP, "@$(PLC) Program:SDReadWriteProgram.Read_Temp[5] S 1")
+}
+
+
+record(ai, "$(P)Program_SDReadWriteProgram_Read_Temp6")
+{
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+    field( INP, "@$(PLC) Program:SDReadWriteProgram.Read_Temp[6] S 1")
+}
+
+
+record(ai, "$(P)Program_SDReadWriteProgram_Read_Temp7")
+{
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+    field( INP, "@$(PLC) Program:SDReadWriteProgram.Read_Temp[7] S 1")
+}
+
+
+record(ai, "$(P)Program_SDReadWriteProgram_Read_Temp8")
+{
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+    field( INP, "@$(PLC) Program:SDReadWriteProgram.Read_Temp[8] S 1")
+}
+
+
+## _Analog_IF8
+## REAL[4]
+## R/W
+record(ao, "$(P)_Analog_IF8_0-SP")
+{
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+    field( OUT, "@$(PLC)  _Analog_IF8[0] S 1")
+}
+
+
+record(ai, "$(P)_Analog_IF8_0-RB")
+{
+    field(SCAN, "I/O Intr")
+	field(DTYP, "EtherIP")
+    field( INP, "@$(PLC) _Analog_IF8[0] S 1")
+}
+
+#
+record(ao, "$(P)_Analog_IF8_1-SP")
+{
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+    field( OUT, "@$(PLC) _Analog_IF8[1] S 1")
+}
+
+record(ai, "$(P)_Analog_IF8_1-RB")
+{
+    field(SCAN, "I/O Intr")
+	field(DTYP, "EtherIP")
+    field( INP, "@$(PLC) _Analog_IF8[1] S 1")
+}
+
+#
+record(ao, "$(P)_Analog_IF8_2-SP")
+{
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+    field( OUT, "@$(PLC) _Analog_IF8[2] S 1")
+}
+
+record(ai, "$(P)_Analog_IF8_2-RB")
+{
+    field(SCAN, "I/O Intr")
+	field(DTYP, "EtherIP")
+    field( INP, "@$(PLC) _Analog_IF8[2] S 1")
+}
+
+
+#
+record(ao, "$(P)_Analog_IF8_3-SP")
+{
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+    field( OUT, "@$(PLC) _Analog_IF8[3] S 1")
+}
+
+record(ai, "$(P)_Analog_IF8_3-RB")
+{
+    field(SCAN, "I/O Intr")
+	field(DTYP, "EtherIP")
+    field( INP, "@$(PLC) _Analog_IF8[3] S 1")
+}
+
+
+
+# IF the tag is of type REAL,
+# the waveform must use DOUBLE !
+record(waveform, "$(P)_Analog_IF8-WF")
+{
+	field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field(INP, "@$(PLC) _Analog_IF8")
+	field(NELM, "4")
+	field(FTVL, "DOUBLE")
+}
+
