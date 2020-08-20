@@ -103,6 +103,8 @@ Tag "temp" (00c4): protocol=ab-eip&gateway=128.3.129.209&path=1,0&plc=ControlLog
 Tag "Delay_in_NANO_seconds" (00c5): protocol=ab-eip&gateway=128.3.129.209&path=1,0&plc=ControlLogix&elem_size=8&elem_count=1&name=Delay_in_NANO_seconds
 Tag "Delay_in_microseconds" (00c4): protocol=ab-eip&gateway=128.3.129.209&path=1,0&plc=ControlLogix&elem_size=4&elem_count=1&name=Delay_in_microseconds
 Tag "CurrentTime" (00c5): protocol=ab-eip&gateway=128.3.129.209&path=1,0&plc=ControlLogix&elem_size=8&elem_count=1&name=CurrentTime
+Tag "StringWrite" (8fce): protocol=ab-eip&gateway=128.3.129.209&path=1,0&plc=ControlLogix&elem_size=88&elem_count=1&name=StringWrite
+Tag "String[2]" (afce): protocol=ab-eip&gateway=128.3.129.209&path=1,0&plc=ControlLogix&elem_size=88&elem_count=2&name=String
 Tag "__CONTAINER" (00c4): protocol=ab-eip&gateway=128.3.129.209&path=1,0&plc=ControlLogix&elem_size=4&elem_count=1&name=__CONTAINER
 Tag "_SD_Write_File_Message" (8fff): protocol=ab-eip&gateway=128.3.129.209&path=1,0&plc=ControlLogix&elem_size=240&elem_count=1&name=_SD_Write_File_Message
 Tag "_SD_Read_File_Message" (8fff): protocol=ab-eip&gateway=128.3.129.209&path=1,0&plc=ControlLogix&elem_size=240&elem_count=1&name=_SD_Read_File_Message
