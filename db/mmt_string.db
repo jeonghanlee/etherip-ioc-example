@@ -1,0 +1,28 @@
+# Note that string data type of PLC is longer
+# than the string record's value,
+# so what you get might be truncated
+record(stringout, "$(P)String0")
+{
+	field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+	field( OUT, "@$(PLC) String[0] S 1")
+}
+
+record(stringin, "$(P)String1")
+{
+	field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field( INP, "@$(PLC) String[1]")
+}
+
+record(stringout, "$(P)StringWrite")
+{
+    field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+	field( OUT, "@$(PLC) StringWrite S 1")
+}
+
+
+
+#Tag "StringWrite" (8fce): protocol=ab-eip&gateway=128.3.129.209&path=1,0&plc=ControlLogix&elem_size=88&elem_count=1&name=Stri
+#Tag "String[2]" (afce): protocol=ab-eip&gateway=128.3.129.209&path=1,0&plc=ControlLogix&elem_size=88&elem_count=2&name=String

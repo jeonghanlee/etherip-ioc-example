@@ -18,7 +18,7 @@
 # Author  : Jeong Han Lee
 # email   : jeonghan.lee@gmail.com
 # Date    : 
-# version : 0.0.1
+# version : 0.0.2
 
 
 function cagett
@@ -38,13 +38,23 @@ function cagett
 #    MMT_DIPB1_FM2_Flow := _Analog_IF8[1]*0.000400 + 0.000000;
 #END_IF;
 
-PAUSE=5
 
 function test1
 {
-    caput LBNL:ABPLC:_Analog_IF8_0-SP 250  2> /dev/null
-    caput LBNL:ABPLC:_Analog_IF8_1-SP 100000  2> /dev/null
+    local sp0;
+    local sp1;
+    local PAUSE;
 
+    sp0=250;
+    sp1=100000;
+
+
+
+    caput LBNL:ABPLC:_Analog_IF8_0-SP "${sp0}"  2> /dev/null
+    caput LBNL:ABPLC:_Analog_IF8_1-SP "${sp1}"  2> /dev/null
+    caput LBNL:ABPLC:String0 "IF8_0 ${sp0} IF8_1 ${sp1}" 2> /dev/null
+    ## Random number between 3 and 9
+    PAUSE=$(tr -cd 3-9 </dev/urandom | head -c 1)
     sleep "$PAUSE"
 
     printf "\n>>> FM1 Flow should be -0-\n"
@@ -52,16 +62,22 @@ function test1
     printf "\n>>> FM2 Flow should be -40-\n"
     cagett "LBNL:ABPLC:MMT_DIPB1_FM2_Flow-RB"
     printf "\n"
+    cagett "LBNL:ABPLC:String1"
+    printf "\n"
 
-    caput LBNL:ABPLC:_Analog_IF8_0-SP 100000  2> /dev/null
-    caput LBNL:ABPLC:_Analog_IF8_1-SP 250  2> /dev/null
-
+    caput LBNL:ABPLC:_Analog_IF8_0-SP "${sp1}"  2> /dev/null
+    caput LBNL:ABPLC:_Analog_IF8_1-SP "${sp0}"  2> /dev/null
+    caput LBNL:ABPLC:String0 "IF8_0 ${sp1} IF8_1 ${sp0}"  2> /dev/null 
+    ## Random number between 3 and 9
+    PAUSE=$(tr -cd 3-9 </dev/urandom | head -c 1)
     sleep "$PAUSE"
 
     printf "\n>>> FM1 Flow should be -40-\n"
     cagett "LBNL:ABPLC:MMT_DIPB1_FM1_Flow-RB"
     printf "\n>>> FM2 Flow should be -0-\n"
     cagett "LBNL:ABPLC:MMT_DIPB1_FM2_Flow-RB"
+    printf "\n"
+    cagett "LBNL:ABPLC:String1"
     printf "\n"
 }
 

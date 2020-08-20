@@ -63,43 +63,9 @@ record(mbbi, "$(P)_SD_RW_Status")
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ##SINT[4950]
 ## 20c2
-#record(waveform, "$(IOC)_SD_current_data")
+#record(waveform, "$(P)_SD_current_data")
 #{
 #	field(SCAN, "1 second")
 #	field(DTYP, "EtherIP")
